@@ -55,9 +55,10 @@ RUN apt-get install -y redis-server \
 RUN apt-get install -y nginx
 
 # 安装node环境
-ADD https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.gz  /opt/
+ADD https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.gz  /opt/  
 WORKDIR /opt
-RUN ln -s node-v6.2.0-linux-x64 nodejs
+RUN tar -zxvf node-v6.2.0-linux-x64.tar.gz \
+  &&  ln -s node-v6.2.0-linux-x64 nodejs
 ENV PATH /opt/nodejs/bin:$PATH
 RUN apt-get install -y python node-gyp
 RUN npm install -g forever pm2 supervisor 
