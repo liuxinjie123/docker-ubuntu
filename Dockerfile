@@ -69,7 +69,7 @@ ENV NODE_PATH=/opt/node-v6.2.0-linux-x64/lib/node_modules
 # 安装nodejs二进制模块
 ####################################
 RUN apt-get install -y imagemagick ghostscript poppler-utils
-RUN npm install -g ccap 
+RUN npm install -g ccap@0.6.4
 
 ####################################
 # 其他需要安装的软件------
