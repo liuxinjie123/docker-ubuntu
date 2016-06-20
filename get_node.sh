@@ -5,6 +5,6 @@ if ! which wget > /dev/null; then
   brew install wget;  
 fi
 
-if [[ ! -f node-v6.2.0-linux-x64.tar ]]; then
+if [[ ! -f node-v6.2.0-linux-x64.tar.gz ]]; then
     wget https://nodejs.org/dist/v6.2.0/node-v6.2.0-linux-x64.tar.gz
 fi
